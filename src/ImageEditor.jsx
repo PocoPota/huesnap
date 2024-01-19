@@ -29,6 +29,10 @@ const ImageEditor = ({ previewImage }) => {
       // Draw background image on canvas
       ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 
+      // Definition of shadow
+      ctx.shadowColor = "#555555";
+      ctx.shadowBlur = 25;
+
       // Draw given image on canvas
       ctx.drawImage(
         givenImage,
