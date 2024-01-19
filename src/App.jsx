@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ImageUploader from "./ImageUploader";
+import ImageEditor from "./ImageEditor";
 import "./style/style.scss";
 
 function App() {
@@ -11,12 +12,11 @@ function App() {
 
   return (
     <>
-      <h1>Image Uploader and Preview</h1>
       <ImageUploader onImageUpload={handleImageUpload} />
       {previewImage && (
         <>
           <h2>Preview</h2>
-          <img src={previewImage} />
+          <ImageEditor previewImage={previewImage} />
         </>
       )}
     </>
