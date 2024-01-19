@@ -15,7 +15,7 @@ const ImageEditor = ({ previewImage }) => {
       givenImage.src = previewImage;
       await givenImage.decode();
       const spaceSize = 140;
-      
+
       // Set the canvas size
       canvasRef.current.width = givenImage.width + spaceSize * 2;
       canvasRef.current.height = givenImage.height + spaceSize * 2;
@@ -30,7 +30,13 @@ const ImageEditor = ({ previewImage }) => {
       ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 
       // Draw given image on canvas
-      ctx.drawImage(givenImage, spaceSize, spaceSize, givenImage.width, givenImage.height);
+      ctx.drawImage(
+        givenImage,
+        spaceSize,
+        spaceSize,
+        givenImage.width,
+        givenImage.height
+      );
 
       // Convert canvas content to dataURL
       const dataURL = canvas.toDataURL("image/png");
