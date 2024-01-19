@@ -38,8 +38,8 @@ const ImageEditor = ({ previewImage }) => {
       await givenImage.decode();
 
       // Other settings
-      const spaceSize = givenImage.width >= givenImage.height ? givenImage.width / 9 : givenImage.height / 9;
-      const radius = spaceSize / 8;
+      const spaceSize = givenImage.width >= givenImage.height ? givenImage.width / 17 : givenImage.height / 17;
+      const radius = spaceSize / 6.5;
 
       // Set the canvas size
       canvasRef.current.width = givenImage.width + spaceSize * 2;
