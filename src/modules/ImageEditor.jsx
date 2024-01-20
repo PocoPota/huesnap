@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const ImageEditor = ({ previewImage }) => {
   const [downloadLink, setDownloadLink] = useState(null);
@@ -27,6 +27,7 @@ const ImageEditor = ({ previewImage }) => {
   };
 
   const applyBackground = async () => {
+    console.log("a");
     try {
       // canvas settings
       const canvas = canvasRef.current;
@@ -38,7 +39,10 @@ const ImageEditor = ({ previewImage }) => {
       await givenImage.decode();
 
       // Other settings
-      const spaceSize = givenImage.width >= givenImage.height ? givenImage.width / 17 : givenImage.height / 17;
+      const spaceSize =
+        givenImage.width >= givenImage.height
+          ? givenImage.width / 17
+          : givenImage.height / 17;
       const radius = spaceSize / 6.5;
 
       // Set the canvas size
@@ -83,6 +87,11 @@ const ImageEditor = ({ previewImage }) => {
     }
   };
 
+  useEffect(() => {
+    console.log("i");
+    previewImage && applyBackground();
+  }, [previewImage]);
+
   const handleDownload = () => {
     const a = document.createElement("a");
     a.href = downloadLink;
@@ -97,7 +106,7 @@ const ImageEditor = ({ previewImage }) => {
           {/* <img src={previewImage} /> */}
           <div>
             <canvas ref={canvasRef}></canvas>
-            <button onClick={applyBackground}>apply Background</button>
+            {/* <button onClick={applyBackground}>apply Background</button> */}
             {downloadLink && <button onClick={handleDownload}>Download</button>}
           </div>
         </>

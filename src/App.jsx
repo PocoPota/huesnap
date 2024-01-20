@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import ImageUploader from "./ImageUploader";
-import ImageEditor from "./ImageEditor";
-import "./style/style.scss";
 
-function App() {
+// modules
+import ImageUploader from "./modules/ImageUploader";
+import ImageEditor from "./modules/ImageEditor";
+
+// components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+// styles
+import "./styles/style.scss";
+
+const App = () => {
   const [previewImage, setPreviewImage] = useState(null);
 
   const handleImageUpload = (imageData) => {
@@ -12,15 +20,18 @@ function App() {
 
   return (
     <>
-      <ImageUploader onImageUpload={handleImageUpload} />
-      {previewImage && (
-        <>
-          <h2>Preview</h2>
-          <ImageEditor previewImage={previewImage} />
-        </>
-      )}
+      <Header />
+      <main id="top">
+        <ImageUploader onImageUpload={handleImageUpload} />
+        {previewImage && (
+          <>
+            <ImageEditor previewImage={previewImage} />
+          </>
+        )}
+      </main>
+      <Footer />
     </>
   );
-}
+};
 
 export default App;
