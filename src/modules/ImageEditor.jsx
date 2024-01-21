@@ -102,14 +102,10 @@ const ImageEditor = ({ previewImage }) => {
   return (
     <>
       {previewImage && (
-        <>
-          {/* <img src={previewImage} /> */}
-          <div>
-            <canvas ref={canvasRef}></canvas>
-            {/* <button onClick={applyBackground}>apply Background</button> */}
-            {downloadLink && <button onClick={handleDownload}>Download</button>}
-          </div>
-        </>
+        <section id="imageEditor">
+          <canvas ref={canvasRef}></canvas>
+          {downloadLink && <button onClick={handleDownload}>Download</button>}
+        </section>
       )}
     </>
   );

@@ -22,11 +22,11 @@ const App = () => {
     <>
       <Header />
       <main id="top">
-        <ImageUploader onImageUpload={handleImageUpload} />
+        {!previewImage && (
+          <ImageUploader onImageUpload={handleImageUpload} />
+        )}
         {previewImage && (
-          <>
-            <ImageEditor previewImage={previewImage} />
-          </>
+          <ImageEditor previewImage={previewImage} />
         )}
       </main>
       <Footer />

@@ -24,7 +24,7 @@ const ImageUploader = ({ onImageUpload }) => {
     <>
       <section id="imageUploader" {...getRootProps()}>
         <input {...getInputProps()} />
-        <p>Drag & drop an image here, or click to select one (max 1 image)</p>
+        <div>Drag & drop an image here, or click to select one.</div>
       </section>
     </>
   );

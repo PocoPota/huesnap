@@ -1,6 +1,8 @@
 // Definition of colors
 $black: #202020;
 $white: #fff;
+$gray: #707070;
+$main: #f7e7ff;
 
 // Import external files
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;800&display=swap');
@@ -60,4 +62,28 @@ header {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 40px;
+
+  #imageUploader {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 600px;
+      margin: 0 auto;
+      height: 300px;
+      background: $main;
+      border: $gray dashed 2px;
+      border-radius: 5px;
+    }
+  }
+
+  #imageEditor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    canvas{
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
 }
