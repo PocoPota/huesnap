@@ -5,7 +5,7 @@ const Footer = () => {
     <>
     <footer>
       <div><a href='https://pocopota.com' target='_blank'>Development: PocoPota</a></div>
-      <div>©HueSnap</div>
+      <div>©HueShot</div>
     </footer>
     </>
   )

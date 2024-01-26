@@ -8,7 +8,7 @@ const Header = () => {
           <li>
             <div id="logo">
               <a href="/">
-                <img src="/huesnap.png" />
+                <img src="/hueshot.png" />
               </a>
             </div>
           </li>
