@@ -27,7 +27,6 @@ const ImageEditor = ({ previewImage }) => {
   };
 
   const applyBackground = async () => {
-    console.log("a");
     try {
       // canvas settings
       const canvas = canvasRef.current;
@@ -88,7 +87,6 @@ const ImageEditor = ({ previewImage }) => {
   };
 
   useEffect(() => {
-    console.log("i");
     previewImage && applyBackground();
   }, [previewImage]);
 
