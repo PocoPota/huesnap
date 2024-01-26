@@ -4,7 +4,6 @@ import { useDropzone } from "react-dropzone";
 const ImageUploader = ({ onImageUpload }) => {
   const onDrop = (acceptedFiles) => {
     if (acceptedFiles && acceptedFiles.length > 0) {
-      // Limit the number of uploaded images to 1
       const file = acceptedFiles[0];
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -16,7 +15,7 @@ const ImageUploader = ({ onImageUpload }) => {
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: ['image/*'],
-    maxFiles: 1, // Limit the number of uploaded files
+    maxFiles: 1,
     onDrop,
   });
 
