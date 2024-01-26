@@ -2,7 +2,8 @@
 $black: #202020;
 $white: #fff;
 $gray: #707070;
-$main: #f7e7ff;
+$color1: #f7e7ff;
+$color2: #2792d9;
 
 // Import external files
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;800&display=swap');
@@ -64,26 +65,53 @@ header {
   margin-top: 40px;
 
   #imageUploader {
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 600px;
-      margin: 0 auto;
-      height: 300px;
-      background: $main;
-      border: $gray dashed 2px;
-      border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 300px;
+    background: $color1;
+    border: $gray dashed 2px;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
-  #imageEditor{
+  #imageEditor {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    canvas{
+
+    canvas {
       max-width: 800px;
       margin: 0 auto;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      width: 120px;
+      margin: 0 auto;
+      margin-top: 30px;
+      padding: 0.8rem 4rem;
+      font-weight: bold;
+      border: 2px solid $color2;
+      color: $color2;
+      border-radius: 50vh;
+      transition: 0.5s;
+      background: $white;
+      font-size: 15px;
+
+      &:hover {
+        color: $white;
+        background: $color2;
+        cursor: pointer;
+      }
     }
   }
 }
