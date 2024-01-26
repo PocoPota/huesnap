@@ -95,7 +95,7 @@ const ImageEditor = ({ previewImage }) => {
   const handleDownload = () => {
     const a = document.createElement("a");
     a.href = downloadLink;
-    a.download = "huesnap.png";
+    a.download = `huesnap-${crypto.randomUUID().substring(0,8)}.png`;
     a.click();
   };
 
