@@ -2,9 +2,12 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <footer>
+      <div><a href='https://pocopota.com' target='_blank'>Development: PocoPota</a></div>
+      <div>©HueSnap</div>
+    </footer>
+    </>
   )
 }
 
