@@ -57,7 +57,7 @@ header {
 }
 
 // Footer
-footer{
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,13 +66,16 @@ footer{
   height: 30px;
   margin: 0 auto;
   margin-top: 100px;
-  div{
+
+  div {
     color: $gray;
     font-size: 13px;
-    a{
+
+    a {
       color: $gray;
       text-decoration: none;
-      &:hover{
+
+      &:hover {
         text-decoration: underline;
       }
     }
@@ -132,6 +135,45 @@ footer{
         color: $white;
         background: $color2;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media(width <=820px) {
+  header {
+    height: 100px;
+
+    ul {
+      margin: 0 auto;
+
+      li {
+        div {
+          a {
+            img {
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #top {
+    margin-top: 10px;
+
+    #imageUploader {
+      width: calc(88% - 40px);
+      height: 250px;
+      padding: 20px;
+    }
+
+    #imageEditor {
+      width: 93%;
+      margin: 0 auto;
+
+      canvas {
+        width: 100%;
       }
     }
   }
