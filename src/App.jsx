@@ -8,6 +8,8 @@ import ImageEditor from "./modules/ImageEditor";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+import Top from "./Top";
+
 // styles
 import "./styles/style.scss";
 
@@ -22,12 +24,13 @@ const App = () => {
     <>
       <Header />
       <main id="top">
-        {!previewImage && (
-          <ImageUploader onImageUpload={handleImageUpload} />
-        )}
-        {previewImage && (
-          <ImageEditor previewImage={previewImage} />
-        )}
+        <section>
+          {!previewImage && <ImageUploader onImageUpload={handleImageUpload} />}
+          {previewImage && <ImageEditor previewImage={previewImage} />}
+        </section>
+        <section id="intro">
+          <Top />
+        </section>
       </main>
       <Footer />
     </>
