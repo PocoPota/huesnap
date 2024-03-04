@@ -87,14 +87,20 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 40px;
-  
-  #intro{
-    h1, p, img{
+
+  #intro {
+    width: 95%;
+    margin: 0 auto;
+
+    h1,
+    p,
+    img {
       display: block;
       text-align: center;
       margin: 5px auto;
     }
-    h1{
+
+    h1 {
       margin-top: 60px;
     }
   }
